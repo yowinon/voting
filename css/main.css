@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:700,800);
+
+/* Header */
+
+#header {
+  padding: 20px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  opacity: 0.65;
+  background: #0066ff
+}
+
+#header #logo h1 {
+  font-size: 30px;
+  margin: -4px 0 0 25px;
+  line-height: 1;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  float: left;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+  color: #fff;
+}
+
+.nav-menu, .nav-menu * {
+  margin: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a {
+  padding: 0 20px 0 0;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+.nav-menu a:hover
+{
+  color: #44b7fd;
+}
+
+.nav-menu > li {
+  float: right;
+}
+
+.nav-menu ul li:hover > a {
+  color: #1dc8cd;
+}
+
+a:hover, a:active, a:focus {
+  color: #1dc9ce;
+  outline: none;
+  text-decoration: none;
+}
+
+ul {
+  padding-top: 3px;
+  padding-right: 5px;
+}
+
+/* Body */
+
+html, body { margin: 0; }
+
+:focus { outline: none; }
+::-webkit-input-placeholder { color: #DEDFDF; }
+::-moz-placeholder { color: #DEDFDF; }
+:-moz-placeholder { color: #DEDFDF; }
+::-ms-input-placeholder { color: #DEDFDF; }
+
+body {
+  background: #6ED0F6;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+form {
+  width: 450px;
+  height: 400px;
+  margin: -185px -225px;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+}
+
+button {
+  background: #079BCF;
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  height: 60px;
+  width: 99.5%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: all .3s cubic-bezier(.6,0,.4,1);
+}
+
+button:hover {
+  background: #007BA5;
+}
+
+input[type=text],
+input[type=password] {
+  border: none;
+  border-radius: 12px;
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  height: 14%;
+  width: 99.5%;
+  margin-bottom: 10px;
+  text-indent: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#error_block {
+  border: none;
+  text-align: center;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  text-indent: 15px;
+  display: none;
+}
+
+span {
+  font-size: 22px;
+  font-family: 'Raleway', sans-serif;
+}

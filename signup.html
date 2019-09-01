@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Voting -Sign Up</title>
+	<meta charset="utf-8" />
+    <link href="img/favicon.png" rel="icon">
+
+ 	<link rel="stylesheet" href="css/main.css">
+ 	<link rel="stylesheet" href="css/signup.css">
+
+</head>
+<body>
+	<header id="header">
+		<div id="logo">
+    		<h1><a href="index.html" class="scrollto">Voting.com</a></h1>
+		</div>
+
+    	<nav id="nav-menu-container">
+        	<ul class="nav-menu">
+                <template id="nav-menu-item">
+                    <li>
+                        <a>Text</a>
+                    </li>
+                </template>
+        	</ul>
+     	</nav>
+    </header>
+
+	<form id="signUpForm">
+
+		<h1>Voting: Sign Up</h1>					
+
+		<input type="text" id="first_name" placeholder="First Name" required="required"/>
+		<input type="text" id="last_name" placeholder="Last Name" required="required"/>
+		<input type="password" id="password" placeholder="Password" required="required" />
+		<div id="error_block">
+			<span id="valid_password_message"></span>
+		</div>
+
+		<div id="radio-group">
+			<div class="radio-div">
+    			<input type="radio" name="group" id="male" checked>
+    			<label for="male">Male</label>
+			</div>
+			<div class="radio-div">
+    			<input type="radio" name="group" id="female">
+    			<label for="female">Female</label>
+    		</div>
+		</div>
+
+		<button type="button" id="btn_submit_register">Sign Up</button>
+
+	</form>
+	
+	<script type="text/javascript" src="js/addheader.js"></script>
+	<script type="text/javascript">
+	"use strict";
+
+	first_name.focus();
+            
+    password.onblur = function() {
+		if (password.value != '') {
+			if (password.value.length < 8) {
+	           
+	            valid_password_message.textContent = 'Minimum password length is 8 symbols';
+	            error_block.style.display= 'block';
+	        }else {
+	            
+	            valid_password_message.textContent = '';
+	            error_block.style.display= 'none';
+	        }
+	    } else {
+	    	
+	    	error_block.style.display= 'block';
+	        valid_password_message.textContent = 'Enter the password';
+		}
+	};	
+
+	btn_submit_register.onclick = function() {
+		
+		if (password.value.length > 8) {
+			window.location.href = `signin.html`;
+		}
+	};
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Voting -Sign In</title>
+	<meta charset="utf-8" />
+    <link href="img/favicon.png" rel="icon">
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header id="header">
+		<div id="logo">
+    		<h1>
+    			<a href="index.html" class="scrollto">Voting.com</a>
+    		</h1>
+		</div>
+
+    	<nav id="nav-menu-container">
+        	<ul class="nav-menu">
+                <template id="nav-menu-item">
+                    <li>
+                        <a>Text</a>
+                    </li>
+                </template>
+        	</ul>
+     	</nav>
+    </header>
+	<form id="signInForm">
+
+		<h1>Voting: Sign In</h1>
+
+		<input type="text" id="first_name" placeholder="First Name" required="required"/>
+		<input type="text" id="last_name" placeholder="Last Name" required="required"/>
+		<input type="password" id="password" placeholder="Password" required="required"/>
+
+		<div id="error_block">
+			<span id="message"></span>
+		</div>
+
+		<button type="button" id="btn_submit_auth">Sign In</button>
+	</form>
+
+	<script type="text/javascript" src="js/addheader.js"></script>
+	<script type="text/javascript" src="js/md5.js"></script>
+
+	<script type="text/javascript">
+	"use strict";
+
+	first_name.focus();
+
+	btn_submit_auth.onclick = function() {
+
+		if (password.value == `` || last_name.value == `` || first_name == ``) {
+			document.getElementById('message').textContent = 'Personal data is empty. Try again';
+			document.getElementById('error_block').style.display = 'block';
+		} else {
+			let hash = MD5(password.value);
+
+			if ( true ) {       
+				localStorage.setItem('auth', 'true');
+				window.location.href = `index.html`;
+			} else {
+				document.getElementById('message').textContent = 'Personal data is not correct. Try again';
+				document.getElementById('error_block').style.display = 'block';
+			}
+		}
+	};
+
+	</script>
+
+</body>
+</html>
